@@ -108,9 +108,13 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
 
-		private void Update()
+#if UNITY_STANDALONE || UNITY_EDITOR
+			RotationSpeed = 0.01f;
+#endif
+        }
+
+        private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();

@@ -1,13 +1,74 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "db2c47b4",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "db2c47b4",
+        "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+        "processId": 16621,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.DefaultCompany.Conductores",
+            "processId": 5723,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.DefaultCompany.Conductores",
+            "processId": 9945,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.DefaultCompany.Conductores",
+            "processId": 8121,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.DefaultCompany.Conductores",
+            "processId": 5886,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.whatsapp",
+            "processId": 31924,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.miui.home",
+            "processId": 2968,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 15570,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 30580,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 7492,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 16621,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +102,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
