@@ -8,6 +8,7 @@ public class BasicsManager : MonoBehaviour
     public GameObject PanelManager;
     public GameObject canvasManual;
     public GameObject canvasMobileControls;
+
     public void ChangeScene(int number)
     {
         SceneManager.LoadScene(number);
