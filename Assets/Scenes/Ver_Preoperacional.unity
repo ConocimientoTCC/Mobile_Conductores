@@ -12713,7 +12713,7 @@ MonoBehaviour:
   imageTouchCarpeta: {fileID: 0}
   defaultTarget: {fileID: 0}
   target: {fileID: 0}
-  minDist: 6
+  minDist: 2
 --- !u!64 &504008217
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20128,6 +20128,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7091512060903026690}
+        m_TargetAssemblyTypeName: Interactable_Object, Assembly-CSharp
+        m_MethodName: OnPointerExitUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 504008216}
+        m_TargetAssemblyTypeName: Interactable_Object, Assembly-CSharp
+        m_MethodName: OnPointerExitUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &848714234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21015,6 +21039,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 504008216}
+        m_TargetAssemblyTypeName: Interactable_Object, Assembly-CSharp
+        m_MethodName: OnPointerExitUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7091512060903026690}
+        m_TargetAssemblyTypeName: Interactable_Object, Assembly-CSharp
+        m_MethodName: OnPointerExitUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &874654963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21663,7 +21711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &913068984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25819,6 +25867,7 @@ GameObject:
   - component: {fileID: 1112054376}
   - component: {fileID: 1112054375}
   - component: {fileID: 1112054374}
+  - component: {fileID: 1112054378}
   m_Layer: 5
   m_Name: UI_Canvas_Documentos
   m_TagString: Untagged
@@ -25909,6 +25958,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1112054378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112054373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a4e12ecad78cb488feaa002b4cf495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113383188
 GameObject:
   m_ObjectHideFlags: 0
@@ -45830,6 +45891,7 @@ GameObject:
   - component: {fileID: 1977237209}
   - component: {fileID: 1977237208}
   - component: {fileID: 1977237207}
+  - component: {fileID: 1977237211}
   m_Layer: 5
   m_Name: UI_Canvas_Responsabilidades
   m_TagString: Untagged
@@ -45920,6 +45982,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1977237211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977237206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a4e12ecad78cb488feaa002b4cf495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1981202578
 PrefabInstance:
   m_ObjectHideFlags: 0

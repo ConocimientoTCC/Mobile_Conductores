@@ -14,6 +14,7 @@ public class UIControlDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         foreach (Interactable_Object obj in interactableObjects)
         {
+            print("entró");
             obj.OnPointerEnterUI();
         }
     }
@@ -22,6 +23,7 @@ public class UIControlDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         foreach (Interactable_Object obj in interactableObjects)
         {
+            print("salió");
             obj.OnPointerExitUI();
         }
     }
