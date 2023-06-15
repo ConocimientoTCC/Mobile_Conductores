@@ -22,10 +22,12 @@ public class LookAtTarget : MonoBehaviour
             if(distance < minDist)
             {
                 transform.LookAt(target);
+                
             }
             else
             {
                 transform.LookAt(defaultTarget);
+                
             }
             
         }

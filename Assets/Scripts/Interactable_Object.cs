@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class Interactable_Object : MonoBehaviour
 {
+    public NPC_Dialogue npcDialogue;
     public BasicsManager basicsManager;
     private bool isInteractable;
     private bool isTouchingUI = false;
+    public GameObject imageTouchManual;
+    public GameObject imageTouchCarpeta;
+
+    public Transform defaultTarget;
+    public Transform target;
+    public float minDist = 6f;
 
     //int interactiveLayerMask;
 
@@ -30,7 +38,7 @@ public class Interactable_Object : MonoBehaviour
         // Verificar si se ha tocado el objeto en dispositivos móviles
         if (isInteractable && Input.touchCount > 0 && isTouchingUI != true)
         {
-            Touch touch = Input.GetTouch(0);
+            UnityEngine.Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
                 Ray ray = Camera.main.ScreenPointToRay(touch.position);
@@ -60,6 +68,36 @@ public class Interactable_Object : MonoBehaviour
                 }
             }
         }
+
+        if (this.gameObject.name != "Bobby" && this.gameObject.name != "document_holder")
+        {
+
+            float distance = Vector3.Distance(target.position, imageTouchManual.transform.position);
+            if (target != null)
+            {
+                if (distance < minDist)
+                {
+                    imageTouchManual.transform.LookAt(target);
+                    imageTouchManual.SetActive(true);
+
+                    imageTouchCarpeta.transform.LookAt(target);
+                    imageTouchCarpeta.SetActive(true);
+
+                    
+
+                    }
+                else
+                {
+                    imageTouchManual.transform.LookAt(defaultTarget);
+                    imageTouchManual.SetActive(false);
+                    imageTouchCarpeta.transform.LookAt(defaultTarget);
+                    imageTouchCarpeta.SetActive(false);
+                    
+
+                }
+
+            }
+        }
     }
 
     private void PerformInteraction()
@@ -69,9 +107,9 @@ public class Interactable_Object : MonoBehaviour
         {
             basicsManager.OpenManualCanvas();
         }
-        else if(this.gameObject.name == "Documentos")
+        else if(this.gameObject.name == "document_holder")
         {
-
+            basicsManager.OpenDocumentsCanvas();
         }
         
     }

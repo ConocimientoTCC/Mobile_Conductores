@@ -12,16 +12,16 @@ public class MovimientoCamion : MonoBehaviour
         // Mover el camión hacia adelante a una velocidad constante
         transform.Translate(Vector3.right * velocidad * Time.deltaTime);
 
-        // Comprobar si una sección de carretera ha salido de la pantalla
-        //if (transform.position.z > generadorSeccionesCarretera.posicionGeneracionX - (generadorSeccionesCarretera.numSeccionesVisibles * generadorSeccionesCarretera.distanciaGeneracion))
-        //{
-        //    generadorSeccionesCarretera.GenerarSeccionCarretera();
-        //    GameObject seccion = generadorSeccionesCarretera.seccionesReciclables.Dequeue();
-        //    generadorSeccionesCarretera.SeccionCarreteraFueraDePantalla(seccion);
-        //}
+        
     }
 }
-
+// Comprobar si una sección de carretera ha salido de la pantalla
+//if (transform.position.z > generadorSeccionesCarretera.posicionGeneracionX - (generadorSeccionesCarretera.numSeccionesVisibles * generadorSeccionesCarretera.distanciaGeneracion))
+//{
+//    generadorSeccionesCarretera.GenerarSeccionCarretera();
+//    GameObject seccion = generadorSeccionesCarretera.seccionesReciclables.Dequeue();
+//    generadorSeccionesCarretera.SeccionCarreteraFueraDePantalla(seccion);
+//}
 
 
 

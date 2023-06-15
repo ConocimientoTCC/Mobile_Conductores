@@ -6,6 +6,8 @@ using TMPro;
 
 public class NPC_Dialogue : MonoBehaviour
 {
+    public Transform player;
+    public GameObject btnDialogue;
     public GameObject btnContinue;
     public GameObject dialoguePanel;
     public GameObject canvasMobileControls;
@@ -17,18 +19,24 @@ public class NPC_Dialogue : MonoBehaviour
 
     public float wordSpeed;
     public bool playerIsClose;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    public float minDist = 4f;
+    
     // Update is called once per frame
     void Update()
     {
         if(dialogueText.text == dialogue[index])
         {
             btnContinue.SetActive(true);
+        }
+
+        float dist = Vector3.Distance(transform.position, player.position);
+        if(dist <= minDist )
+        {
+            btnDialogue.SetActive(true);
+        }
+        else
+        {
+            btnDialogue.SetActive(false);
         }
         //if (Input.GetKeyDown(KeyCode.E) && playerIsClose) 
         //{
@@ -44,32 +52,31 @@ public class NPC_Dialogue : MonoBehaviour
         //}
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OpenDialogue()
     {
         //if (other.CompareTag("Player"))
         //{
         //    playerIsClose = true;
         //}
-        if (dialoguePanel.activeInHierarchy)
-        {
-            zeroTexto();
-        }
-        else
-        {
+        //if (dialoguePanel.activeInHierarchy)
+        //{
+        //    zeroTexto();
+        //}
+        //else
+        //{
             canvasMobileControls.SetActive(false);
             dialoguePanel.SetActive(true);
             lastRoutine = StartCoroutine(Typing());
-        }
+        //}
     }
 
-    private void OnTriggerExit(Collider other)
+    public void CloseDialogue()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerIsClose = false;
+        
+            //playerIsClose = false;
             zeroTexto();
-            canvasMobileControls.SetActive(true);   
-        }
+            canvasMobileControls.SetActive(true);
+        
     }
 
     public void zeroTexto()
