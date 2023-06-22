@@ -10,9 +10,11 @@ public class CheckList_Controller : MonoBehaviour
     public GameObject outroPanel;
     public Toggle[] togglesGO;
     public int togglesActivated;
-    
-    public void CheckToggles()
+    public UnityEngine.UI.Button button;
+
+    private void Update()
     {
+
         for (int i = 0; i < togglesGO.Length; i++)
         {
             if (togglesGO[i].isOn == true && togglesGO[i].interactable == true)
@@ -21,16 +23,21 @@ public class CheckList_Controller : MonoBehaviour
                 togglesGO[i].interactable = false;
                 if (togglesActivated == togglesGO.Length)
                 {
-                    outroPanel.SetActive(true);
+                    button.interactable = true;
                     break;
                 }
             }
             else if (togglesActivated == togglesGO.Length)
             {
-                outroPanel.SetActive(true);
+                button.interactable = true;
                 break;
             }
         }
+    }
+
+    public void CheckToggles()
+    {
+        outroPanel.SetActive(true);
     }
 
 }

@@ -57,14 +57,14 @@ public class Interactable_Object : MonoBehaviour
         // Verificar si se hizo clic en el objeto en PC
         if (isInteractable && Input.GetMouseButtonDown(0) && isTouchingUI != true)
         {
-            print("hello1");
+            //print("hello1");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    print("hello2");
+                    //print("hello2");
                     // Ejecutar la función de interacción
                     PerformInteraction();
                 }

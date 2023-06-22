@@ -61,5 +61,10 @@ public class Resp_PanelManager : MonoBehaviour
         // Mostrar el panel actual
         panels[currentPanelIndex].SetActive(true);
     }
+
+    public void RestorePanelIndex()
+    {
+        currentPanelIndex = 0;
+    }
 }
 

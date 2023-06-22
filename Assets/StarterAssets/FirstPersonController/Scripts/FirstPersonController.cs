@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 #endif
 
 namespace StarterAssets
@@ -18,6 +19,7 @@ namespace StarterAssets
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
+		public Slider mySlider;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
 
@@ -116,8 +118,8 @@ namespace StarterAssets
 
         private void Update()
 		{
-			JumpAndGravity();
-			GroundedCheck();
+			//JumpAndGravity();
+			//GroundedCheck();
 			Move();
 		}
 
@@ -268,5 +270,10 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+		public void ChangeRotationSens()
+		{
+			RotationSpeed = mySlider.value;
+		} 
 	}
 }
