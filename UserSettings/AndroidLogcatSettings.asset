@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "db2c47b4",
     "m_SelectedPackage": {
-        "deviceId": "db2c47b4",
-        "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-        "processId": 4543,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,146 +11,26 @@
         {
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 27196,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 29738,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 31054,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 3250,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.whatsapp",
-            "processId": 29041,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 19003,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 20199,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 12649,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 16363,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 23572,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 25346,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 27083,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 28701,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 30966,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 8809,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 27365,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 5198,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 8076,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 26149,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 27370,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 13466,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 22233,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 2852,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 4543,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 5111,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 28188,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 29774,
+            "exited": true
         }
     ],
     "m_Tags": {

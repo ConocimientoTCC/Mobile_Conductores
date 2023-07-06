@@ -6,12 +6,14 @@ using TMPro;
 
 public class Puntaje : MonoBehaviour
 {
+    public PlayFabManager playfabManager;
     public int puntajeInicial = 0; // Puntaje inicial
     private int puntajeActual; // Puntaje actual
     private TMP_Text textoPuntaje; // Referencia al componente de texto en la UI
 
     private void Start()
     {
+        playfabManager = FindAnyObjectByType<PlayFabManager>();
         // Obtener la referencia al componente de texto en la UI
         textoPuntaje = GetComponent<TMP_Text>();
 
@@ -29,6 +31,7 @@ public class Puntaje : MonoBehaviour
 
         // Actualizar la UI con el nuevo puntaje
         ActualizarUI();
+        playfabManager.SendLeaderboard(puntajeActual);
     }
 
     private void ActualizarUI()
