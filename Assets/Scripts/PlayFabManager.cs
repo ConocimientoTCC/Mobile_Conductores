@@ -5,10 +5,12 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.PackageManager;
 
 public class PlayFabManager : MonoBehaviour
 {
     private static PlayFabManager instance;
+    public Master_Start masterStart;
     [Header("UI Register")]
     public TMP_InputField cedulaInput;
     public TMP_InputField userNameInput;
@@ -23,6 +25,10 @@ public class PlayFabManager : MonoBehaviour
     [Header("PANELS")]
     public GameObject gamePanel;
     public GameObject alertPanel;
+    public TMP_Text alertText;
+    public TMP_Text alertTitleText;
+    public Image alertImage;
+    public Button alertBtn;
     public GameObject loginPanel;
     public GameObject registerPanel;
     // Start is called before the first frame update
@@ -39,11 +45,16 @@ public class PlayFabManager : MonoBehaviour
 
         }
 
+        
+
     }
 
     private void Update()
     {
-        
+        if(masterStart == null)
+        {
+            FindObjectOfType<Master_Start>();
+        }
     }
 
     public void LoginButton()
@@ -51,13 +62,23 @@ public class PlayFabManager : MonoBehaviour
         var request = new LoginWithEmailAddressRequest
         {
             Email = emailInputLogin.text,
-            Password = passwordInputLogin.text
+            Password = passwordInputLogin.text,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSucess, OnError);
+        
     }
 
     public void RegisterButton()
     {
+        if(passwordInput.text.Length < 6)
+        {
+            OnErrorPasswordLength();
+            return;
+        }
         var request = new RegisterPlayFabUserRequest
         {
             DisplayName = userNameInput.text,
@@ -72,13 +93,21 @@ public class PlayFabManager : MonoBehaviour
     void OnLoginSucess(LoginResult result)
     {
         loggedInPlayfabId = result.PlayFabId;
-        Debug.Log("Successful login");
         alertPanel.SetActive(true);
+        alertTitleText.text = "¡Ingreso exitoso!";
+        alertText.text = "Bienvenido de vuelta <b>" + result.InfoResultPayload.PlayerProfile.DisplayName + "</b>, nos alegra verte.";
+        alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseAlertPanel(); });
     }
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
         loggedInPlayfabId = result.PlayFabId;
         alertPanel.SetActive(true);
+        alertTitleText.text = "¡Registro exitoso!";
+        alertText.text = "¡Perfecto! Has creado tu cuenta, recuerda que desde el panel de ingreso puedes recuperar tu contraseña en caso de que lo necesites.";
+        alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseAlertPanel(); });
+        
     }
 
     public void ResetPasswordButton()
@@ -88,13 +117,28 @@ public class PlayFabManager : MonoBehaviour
 
     void OnSuccess(LoginResult result)
     {
-        Debug.Log("YES");
+        //Debug.Log("YES");
+        
     }
     
     void OnError(PlayFabError error)
     {
-        Debug.Log("NO");
+        if(error.ErrorMessage == "The display name entered is not available.")
+        {
+            alertTitleText.text = "Error interno: nombre en uso";
+            alertText.text = "Por favor utiliza tu segundo apellido, en caso de que vuelvas a ver este mensaje, agrega cualquier letra a tu nombre.";
+        }
+        else
+        {
+            alertTitleText.text = "Ups...";
+            alertText.text = "Asegúrate de haber llenado todos los campos correctamente.";
+        }
+        Debug.Log(error.ErrorMessage);
         Debug.Log(error.GenerateErrorReport());
+        alertPanel.SetActive(true);
+        
+        alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
     }
 
     public void SendLeaderboard(int score)
@@ -111,6 +155,15 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
+    }
+
+    void OnErrorPasswordLength()
+    {
+        alertPanel.SetActive(true);
+        alertTitleText.text = "Contraseña muy corta";
+        alertText.text = "Tu contraseña debe contener mínimo 6 caracteres.";
+        alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
     }
 
     void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)

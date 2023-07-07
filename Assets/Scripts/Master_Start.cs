@@ -59,4 +59,8 @@ public class Master_Start : MonoBehaviour
         gameScreen.SetActive(true);
     }
 
+    public void CloseOnlyAlert()
+    {
+        alertPanel.SetActive(false);
+    }
 }
