@@ -23941,6 +23941,7 @@ MonoBehaviour:
   canvasManual: {fileID: 1977237206}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 6751388635511190959}
+  canvasKit: {fileID: 0}
   PanelPause: {fileID: 0}
 --- !u!1 &1128565252
 GameObject:
@@ -29777,6 +29778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FirstAidKit_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355713013926475229, guid: 82a76256a42024049964a0c8b9bb380f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a76256a42024049964a0c8b9bb380f, type: 3}
@@ -37695,6 +37701,7 @@ MonoBehaviour:
   canvasManual: {fileID: 0}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 0}
+  canvasKit: {fileID: 0}
   PanelPause: {fileID: 0}
 --- !u!4 &1789094182
 Transform:
@@ -53447,6 +53454,7 @@ MonoBehaviour:
   basicsManager: {fileID: 1123779037}
   imageTouchManual: {fileID: 0}
   imageTouchCarpeta: {fileID: 0}
+  imageTouchKit: {fileID: 0}
   defaultTarget: {fileID: 0}
   target: {fileID: 0}
   minDist: 6
@@ -55124,6 +55132,7 @@ MonoBehaviour:
   canvasManual: {fileID: 0}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 0}
+  canvasKit: {fileID: 0}
   PanelPause: {fileID: 0}
 --- !u!4 &7963990339785480315
 Transform:

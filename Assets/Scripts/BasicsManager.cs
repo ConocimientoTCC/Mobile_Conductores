@@ -9,7 +9,18 @@ public class BasicsManager : MonoBehaviour
     public GameObject canvasManual;
     public GameObject canvasDocuments;
     public GameObject canvasMobileControls;
+
     public GameObject canvasKit;
+    public GameObject panelIntroKit;
+    public GameObject panelOutroKit;
+
+    public GameObject canvasExtintor;
+    public GameObject panelIntroExtintor; 
+    public GameObject panelOutroExtintor;
+
+    public GameObject canvasBotiquin;
+    public GameObject panelIntroBotiquin;
+    public GameObject panelOutroBotiquin;
 
     public GameObject PanelPause;
 
@@ -72,6 +83,37 @@ public class BasicsManager : MonoBehaviour
     public void OpenKitCanvas()
     {
         canvasKit.SetActive(true);
+        panelIntroKit.SetActive(true);
+        panelOutroKit.SetActive(false);
+    }
+
+    public void OpenExtintorCanvas()
+    {
+        canvasExtintor.SetActive(true);
+        panelIntroExtintor.SetActive(true);
+        panelOutroExtintor.SetActive(false);
+    }
+
+    public void OpenBotiquinCanvas()
+    {
+        canvasBotiquin.SetActive(true);
+        panelIntroBotiquin.SetActive(true);
+        panelOutroBotiquin.SetActive(false);
+    }
+
+    public void CloseKitCanvas()
+    {
+        canvasKit.SetActive(false);
+    }
+
+    public void CloseExtintorCanvas()
+    {
+        canvasExtintor.SetActive(false);
+    }
+
+    public void CloseBotiquinCanvas()
+    {
+        canvasBotiquin.SetActive(false);
     }
 
     public void ExitApp()

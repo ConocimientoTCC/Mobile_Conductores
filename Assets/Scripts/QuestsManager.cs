@@ -18,8 +18,22 @@ public class QuestsManager : MonoBehaviour
     public Toggle toggleLimpieza;
     [Header("-- Kit Carretera --")]
     public GameObject panelKit;
+    public GameObject panelKitIntro;
+    public GameObject panelKitOutro;
     public TMP_Text questTextKit;
     public Toggle toggleKit;
+    [Header("-- Extintor --")]
+    public GameObject panelExtintor;
+    public GameObject panelExtintorIntro;
+    public GameObject panelExtintorOutro;
+    public TMP_Text questTextExtintor;
+    public Toggle toggleExtintor;
+    [Header("-- Botiquín --")]
+    public GameObject panelBotiquin;
+    public GameObject panelBotiquinIntro;
+    public GameObject panelBotiquinOutro;
+    public TMP_Text questTextBotiquin;
+    public Toggle toggleBotiquin;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +67,34 @@ public class QuestsManager : MonoBehaviour
         }
         toggleKit.isOn = true;
         questTextKit.fontStyle = FontStyles.Strikethrough;
-        panelKit.SetActive(false);
+        panelKitIntro.SetActive(false);
+        panelKitOutro.SetActive(true);
         
+    }
+
+    public void CompleteExtintor()
+    {
+        if (toggleExtintor.isOn == false)
+        {
+            puntaje.AumentarPuntaje(5);
+        }
+        toggleExtintor.isOn = true;
+        questTextExtintor.fontStyle = FontStyles.Strikethrough;
+        panelExtintorIntro.SetActive(false);
+        panelExtintorOutro.SetActive(true);
+
+    }
+
+    public void CompleteBotiquin()
+    {
+        if (toggleBotiquin.isOn == false)
+        {
+            puntaje.AumentarPuntaje(5);
+        }
+        toggleBotiquin.isOn = true;
+        questTextBotiquin.fontStyle = FontStyles.Strikethrough;
+        panelBotiquinIntro.SetActive(false);
+        panelBotiquinOutro.SetActive(true);
+
     }
 }

@@ -12,6 +12,8 @@ public class Interactable_Object : MonoBehaviour
     public GameObject imageTouchManual;
     public GameObject imageTouchCarpeta;
     public GameObject imageTouchKit;
+    public GameObject imageTouchExtintor;
+    public GameObject imageTouchBotiquin;
 
     public Transform defaultTarget;
     public Transform target;
@@ -36,6 +38,7 @@ public class Interactable_Object : MonoBehaviour
 
     private void Update()
     {
+        print("touchingui="+isTouchingUI);
         // Verificar si se ha tocado el objeto en dispositivos móviles
         if (isInteractable && Input.touchCount > 0 && isTouchingUI != true)
         {
@@ -72,7 +75,7 @@ public class Interactable_Object : MonoBehaviour
             }
         }
 
-        if (this.gameObject.name != "Bobby" && this.gameObject.name != "document_holder" && this.gameObject.name != "kit_carretera")
+        if (this.gameObject.name != "Bobby" && this.gameObject.name != "document_holder" && this.gameObject.name != "kit_carretera" && this.gameObject.name != "extintor" && this.gameObject.name != "botiquin")
         {
 
             float distance = Vector3.Distance(target.position, imageTouchManual.transform.position);
@@ -117,6 +120,14 @@ public class Interactable_Object : MonoBehaviour
         else if(this.gameObject.name == "kit_carretera")
         {
             basicsManager.OpenKitCanvas();
+        }
+        else if(this.gameObject.name == "extintor")
+        {
+            basicsManager.OpenExtintorCanvas();
+        }
+        else if(this.gameObject.name == "botiquin")
+        {
+            basicsManager.OpenBotiquinCanvas();
         }
         
     }
