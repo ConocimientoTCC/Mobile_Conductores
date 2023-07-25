@@ -40,4 +40,5 @@ public class CheckList_Controller : MonoBehaviour
         outroPanel.SetActive(true);
     }
 
+
 }

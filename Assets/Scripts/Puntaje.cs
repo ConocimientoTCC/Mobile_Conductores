@@ -31,7 +31,7 @@ public class Puntaje : MonoBehaviour
 
         // Actualizar la UI con el nuevo puntaje
         ActualizarUI();
-        playfabManager.SendLeaderboard(puntajeActual);
+        //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
     }
 
     private void ActualizarUI()

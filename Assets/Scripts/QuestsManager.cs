@@ -16,6 +16,10 @@ public class QuestsManager : MonoBehaviour
     public TMP_Text questText;
     public GameObject[] stainsGO;
     public Toggle toggleLimpieza;
+    [Header("-- Kit Carretera --")]
+    public GameObject panelKit;
+    public TMP_Text questTextKit;
+    public Toggle toggleKit;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +43,17 @@ public class QuestsManager : MonoBehaviour
 
             puntaje.AumentarPuntaje(5);
         }
+    }
+
+    public void CompleteKit()
+    {
+        if (toggleKit.isOn == false)
+        {
+            puntaje.AumentarPuntaje(5);
+        }
+        toggleKit.isOn = true;
+        questTextKit.fontStyle = FontStyles.Strikethrough;
+        panelKit.SetActive(false);
+        
     }
 }

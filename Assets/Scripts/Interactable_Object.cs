@@ -11,6 +11,7 @@ public class Interactable_Object : MonoBehaviour
     private bool isTouchingUI = false;
     public GameObject imageTouchManual;
     public GameObject imageTouchCarpeta;
+    public GameObject imageTouchKit;
 
     public Transform defaultTarget;
     public Transform target;
@@ -71,7 +72,7 @@ public class Interactable_Object : MonoBehaviour
             }
         }
 
-        if (this.gameObject.name != "Bobby" && this.gameObject.name != "document_holder")
+        if (this.gameObject.name != "Bobby" && this.gameObject.name != "document_holder" && this.gameObject.name != "kit_carretera")
         {
 
             float distance = Vector3.Distance(target.position, imageTouchManual.transform.position);
@@ -112,6 +113,10 @@ public class Interactable_Object : MonoBehaviour
         else if(this.gameObject.name == "document_holder")
         {
             basicsManager.OpenDocumentsCanvas();
+        }
+        else if(this.gameObject.name == "kit_carretera")
+        {
+            basicsManager.OpenKitCanvas();
         }
         
     }

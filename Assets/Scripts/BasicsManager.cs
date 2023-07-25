@@ -9,6 +9,7 @@ public class BasicsManager : MonoBehaviour
     public GameObject canvasManual;
     public GameObject canvasDocuments;
     public GameObject canvasMobileControls;
+    public GameObject canvasKit;
 
     public GameObject PanelPause;
 
@@ -66,6 +67,11 @@ public class BasicsManager : MonoBehaviour
     {
         canvasMobileControls.SetActive(false);
         canvasDocuments.SetActive(true);
+    }
+
+    public void OpenKitCanvas()
+    {
+        canvasKit.SetActive(true);
     }
 
     public void ExitApp()
