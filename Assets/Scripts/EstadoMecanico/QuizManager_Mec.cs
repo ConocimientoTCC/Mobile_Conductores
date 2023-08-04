@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuizManager_Mec : MonoBehaviour
 {
     public Question_Mec[] questions; // Lista de preguntas que muestra este panel
     public GameObject resultPanel; // Panel para mostrar la alerta de resultado
+    public TMP_Text resultTitle, resultText;
     public GameObject finishButton; // Botón para terminar el cuestionario
 
     private bool isQuizFinished = false; // Bandera para indicar si el cuestionario está terminado
@@ -20,7 +22,21 @@ public class QuizManager_Mec : MonoBehaviour
         }
     }
 
-    public void SelectAnswer(int questionIdentifier, int selectedAnswerIndex)
+    public void testing(int questionIdentifier)
+    {
+        //if (!isQuizFinished)
+        //{
+        //    // Obtener la pregunta actual por su identificador único o índice en el array de preguntas
+        //    Question_Mec currentQuestion = questions[questionIdentifier];
+
+        //    // Verificar si la respuesta es correcta o incorrecta
+        //    bool isCorrect = selectedAnswerIndex == currentQuestion.correctAnswerIndex;
+
+        //    // Mostrar la alerta de resultado y manejar la lógica para mostrar la siguiente pregunta o finalizar el cuestionario
+        //    ShowResult(isCorrect);
+        //}
+    }
+    public void SelectAnswerBtn(int questionIdentifier, int selectedAnswerIndex)
     {
         if (!isQuizFinished)
         {
@@ -31,7 +47,7 @@ public class QuizManager_Mec : MonoBehaviour
             bool isCorrect = selectedAnswerIndex == currentQuestion.correctAnswerIndex;
 
             // Mostrar la alerta de resultado y manejar la lógica para mostrar la siguiente pregunta o finalizar el cuestionario
-            ShowResult(isCorrect);
+            //ShowResult(isCorrect);
         }
     }
 
@@ -39,6 +55,15 @@ public class QuizManager_Mec : MonoBehaviour
     {
         // Mostrar la alerta (panel) de resultado correcto o incorrecto
         resultPanel.SetActive(true);
+        if(isCorrect == true)
+        {
+            resultTitle.text = "Perfecto";
+        }
+        else
+        {
+            resultTitle.text = "Ups...";
+        }
+        
 
         // Aquí podrías manejar la lógica para pasar a la siguiente pregunta o finalizar el cuestionario.
         // Puedes implementar un sistema de navegación entre preguntas dentro del mismo panel.

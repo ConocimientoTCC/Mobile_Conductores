@@ -34,6 +34,13 @@ public class QuestsManager : MonoBehaviour
     public GameObject panelBotiquinOutro;
     public TMP_Text questTextBotiquin;
     public Toggle toggleBotiquin;
+    [Header("-- Estado Mecánico --")]
+    public int questionsAnswered;
+    public GameObject panelEstadoMec;
+    public GameObject panelEstadoMecIntro;
+    public GameObject panelEstadoMecOutro;
+    public TMP_Text questTextEstadoMec;
+    public Toggle toggleEstadoMec;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +50,10 @@ public class QuestsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(toggleLimpieza == true && toggleKit == true && toggleExtintor == true && toggleBotiquin == true)
+        {
+
+        }
     }
 
     public void UpdateStains()
@@ -97,4 +107,10 @@ public class QuestsManager : MonoBehaviour
         panelBotiquinOutro.SetActive(true);
 
     }
+
+    public void UpdateQuestions()
+    {
+        questionsAnswered++;
+    }
+
 }
