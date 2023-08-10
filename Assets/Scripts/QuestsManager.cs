@@ -8,6 +8,7 @@ public class QuestsManager : MonoBehaviour
 {
     //public BasicsManager basicsManager;
     //Puntaje//
+    public GameObject panelControles_1, panelControles_2;
     public LastMission_Dialogue lastMissionDialogue;
     public GameObject lastMissionDialogueBtn;
     public AudioSource achievementSound;
@@ -71,7 +72,10 @@ public class QuestsManager : MonoBehaviour
         {
             print("puutamadre");
             showBtn = false;
+            panelControles_1.SetActive(false);
+            panelControles_2.SetActive(false);
             lastMissionDialogueBtn.SetActive(true);
+            lastMissionDialogueBtn.GetComponent<Animator>().SetBool("PlayAnim", true);
             questTextEstadoMec.gameObject.SetActive(true);
             toggleEstadoMec.gameObject.SetActive(true);
             numberQuests.text = 1.ToString();
@@ -176,7 +180,7 @@ public class QuestsManager : MonoBehaviour
             achievementSound.Play();
             puntaje.AumentarPuntaje(10);
             scoreSound.PlayDelayed(1.5f);
-            
+            puntaje.playfabManager.SavePlayerData(puntaje.puntajeActual.ToString());
         }
         toggleEstadoMec.isOn = true;
         questTextEstadoMec.fontStyle = FontStyles.Strikethrough;

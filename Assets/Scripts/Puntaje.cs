@@ -8,8 +8,10 @@ public class Puntaje : MonoBehaviour
 {
     public PlayFabManager playfabManager;
     public int puntajeInicial = 0; // Puntaje inicial
-    private int puntajeActual; // Puntaje actual
+    public int puntajeActual; // Puntaje actual
     private TMP_Text textoPuntaje; // Referencia al componente de texto en la UI
+
+    public Animator puntajeAnim;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class Puntaje : MonoBehaviour
 
         // Establecer el puntaje inicial
         puntajeActual = puntajeInicial;
+        playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
 
         // Actualizar la UI con el puntaje inicial
         ActualizarUI();
@@ -26,12 +29,13 @@ public class Puntaje : MonoBehaviour
 
     public void AumentarPuntaje(int qtty)
     {
+        puntajeAnim.SetTrigger("PlayAnim");
         // Incrementar el puntaje en 1
         puntajeActual += qtty;
 
         // Actualizar la UI con el nuevo puntaje
         ActualizarUI();
-        //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
+        playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
     }
 
     public void RestarPuntaje(int qtty)
@@ -41,7 +45,7 @@ public class Puntaje : MonoBehaviour
 
         // Actualizar la UI con el nuevo puntaje
         ActualizarUI();
-        //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
+        playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
     }
 
     private void ActualizarUI()

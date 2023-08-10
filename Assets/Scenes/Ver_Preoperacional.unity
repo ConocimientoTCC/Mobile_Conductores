@@ -259,8 +259,8 @@ RectTransform:
   m_Father: {fileID: 806278939}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5126622}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3143,6 +3143,7 @@ GameObject:
   - component: {fileID: 119926871}
   - component: {fileID: 119926870}
   - component: {fileID: 119926869}
+  - component: {fileID: 119926873}
   m_Layer: 5
   m_Name: btn_last_dialogue
   m_TagString: Untagged
@@ -3276,6 +3277,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119926867}
   m_CullTransparentMesh: 1
+--- !u!95 &119926873
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119926867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ee1a0adcdd5f3440a8c406032c25eb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &121114381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7781,7 +7803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &275388924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14919,6 +14941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497037525}
+  - component: {fileID: 497037526}
   m_Layer: 5
   m_Name: xp
   m_TagString: Untagged
@@ -14947,6 +14970,27 @@ RectTransform:
   m_AnchoredPosition: {x: 59.628418, y: -37.268066}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &497037526
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497037524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dc4e76197cfc3d4eae94f461516d6af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &497332396
 GameObject:
   m_ObjectHideFlags: 0
@@ -17172,7 +17216,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -18718,6 +18762,7 @@ GameObject:
   - component: {fileID: 616273731}
   - component: {fileID: 616273730}
   - component: {fileID: 616273733}
+  - component: {fileID: 616273734}
   m_Layer: 5
   m_Name: btn_dialogue
   m_TagString: Untagged
@@ -18863,6 +18908,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a4e12ecad78cb488feaa002b4cf495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &616273734
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616273728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ebd388fdec9d7243875615f1b7ff32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &616398861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21855,7 +21921,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -27668,8 +27734,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6722732}
   m_HandleRect: {fileID: 6722731}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.4873378
+  m_Value: 1
+  m_Size: 0.48732537
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -32463,6 +32529,7 @@ MonoBehaviour:
   panelIntroMecanico: {fileID: 379011812}
   panelOutroMecanico: {fileID: 850314073}
   PanelPause: {fileID: 1714676026}
+  questsBtnAnim: {fileID: 2024842100}
 --- !u!1 &1128215638
 GameObject:
   m_ObjectHideFlags: 0
@@ -40808,9 +40875,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1452978743
 MonoBehaviour:
@@ -47761,7 +47828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0001373291}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 1025.9653}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1660599812
@@ -51939,6 +52006,7 @@ MonoBehaviour:
   panelIntroMecanico: {fileID: 0}
   panelOutroMecanico: {fileID: 0}
   PanelPause: {fileID: 0}
+  questsBtnAnim: {fileID: 0}
 --- !u!4 &1789094182
 Transform:
   m_ObjectHideFlags: 0
@@ -53273,6 +53341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playfabManager: {fileID: 0}
   puntajeInicial: 0
+  puntajeAnim: {fileID: 497037526}
 --- !u!1 &1831860307
 GameObject:
   m_ObjectHideFlags: 0
@@ -58799,6 +58868,7 @@ GameObject:
   - component: {fileID: 2024842097}
   - component: {fileID: 2024842096}
   - component: {fileID: 2024842099}
+  - component: {fileID: 2024842100}
   m_Layer: 5
   m_Name: btn_quests
   m_TagString: Untagged
@@ -58896,6 +58966,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123779037}
+        m_TargetAssemblyTypeName: BasicsManager, Assembly-CSharp
+        m_MethodName: CancelAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2024842097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58946,6 +59028,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a4e12ecad78cb488feaa002b4cf495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2024842100
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024842094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27b069dc10916674e99dde3a8408e8de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2025798358
 GameObject:
   m_ObjectHideFlags: 0
@@ -59431,6 +59534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf4767f472955746a86558197d94de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelControles_1: {fileID: 4716308930085441266}
+  panelControles_2: {fileID: 8176038822381365107}
   lastMissionDialogue: {fileID: 2123009771}
   lastMissionDialogueBtn: {fileID: 119926867}
   achievementSound: {fileID: 2047398772}
@@ -62588,6 +62693,8 @@ MonoBehaviour:
   btnContinue: {fileID: 554086092}
   dialoguePanel: {fileID: 173356198}
   canvasMobileControls: {fileID: 6751388635511190959}
+  panelControles_1: {fileID: 4716308930085441266}
+  panelControles_2: {fileID: 8176038822381365107}
   dialogueText: {fileID: 752739138}
   auraEstadoMec: {fileID: 819776680648900767}
   colliderEstadoMec: {fileID: 1827984051}
@@ -64392,6 +64499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1983739300}
   btnDialogue: {fileID: 616273728}
+  btnDialogueAnim: {fileID: 616273734}
+  playAnim: 0
   btnContinue: {fileID: 1193021086}
   dialoguePanel: {fileID: 1094951836}
   canvasMobileControls: {fileID: 6751388635511190959}
@@ -93674,6 +93783,7 @@ MonoBehaviour:
   panelIntroMecanico: {fileID: 0}
   panelOutroMecanico: {fileID: 0}
   PanelPause: {fileID: 0}
+  questsBtnAnim: {fileID: 0}
 --- !u!4 &7963990339785480315
 Transform:
   m_ObjectHideFlags: 0

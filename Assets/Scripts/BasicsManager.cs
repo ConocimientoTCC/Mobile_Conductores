@@ -27,6 +27,8 @@ public class BasicsManager : MonoBehaviour
     public GameObject panelOutroMecanico;
 
     public GameObject PanelPause;
+
+    public Animator questsBtnAnim;
     
 
     public void ChangeScene(int number)
@@ -72,6 +74,7 @@ public class BasicsManager : MonoBehaviour
         panel.SetActive(false);
         canvasDocuments.SetActive(false);
         canvasMobileControls.SetActive(true);
+        questsBtnAnim.SetBool("PlayAnim", true);
     }
 
     public void OpenManualCanvas()
@@ -154,5 +157,13 @@ public class BasicsManager : MonoBehaviour
             Time.timeScale = 0;
         }
         
+    }
+
+    public void CancelAnim()
+    {
+        if (questsBtnAnim.GetBool("PlayAnim") == true)
+        {
+            questsBtnAnim.SetBool("PlayAnim", false);
+        }
     }
 }

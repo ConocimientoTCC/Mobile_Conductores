@@ -8,6 +8,8 @@ public class NPC_Dialogue : MonoBehaviour
 {
     public Transform player;
     public GameObject btnDialogue;
+    public Animator btnDialogueAnim;
+    public bool playAnim = false;
     public GameObject btnContinue;
     public GameObject dialoguePanel;
     public GameObject canvasMobileControls;
@@ -22,11 +24,18 @@ public class NPC_Dialogue : MonoBehaviour
     public float minDist = 4f;
 
     public AudioSource dialogueSound;
-    
+
+    private void Start()
+    {
+        btnDialogueAnim = btnDialogue.GetComponent<Animator>();
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(dialogueText.text == dialogue[index])
+        
+        if (dialogueText.text == dialogue[index])
         {
             btnContinue.SetActive(true);
         }
@@ -40,6 +49,13 @@ public class NPC_Dialogue : MonoBehaviour
         {
             btnDialogue.SetActive(false);
         }
+
+        //if (playAnim == true && btnDialogue.activeInHierarchy == true)
+        //{
+        //    btnDialogueAnim.SetBool("PlayAnim", playAnim);
+        //    playAnim = false;
+        //    print("aaa");
+        //}
         //if (Input.GetKeyDown(KeyCode.E) && playerIsClose) 
         //{
         //    if (dialoguePanel.activeInHierarchy)
@@ -66,10 +82,17 @@ public class NPC_Dialogue : MonoBehaviour
         //}
         //else
         //{
-            canvasMobileControls.SetActive(false);
-            dialoguePanel.SetActive(true);
+
+        //Invoke("CloseMobileControls", 2f);
+        canvasMobileControls.SetActive(false);
+        dialoguePanel.SetActive(true);
             lastRoutine = StartCoroutine(Typing());
         //}
+    }
+
+    public void CloseMobileControls()
+    {
+        canvasMobileControls.SetActive(false);
     }
 
     public void CloseDialogue()
@@ -112,6 +135,8 @@ public class NPC_Dialogue : MonoBehaviour
         {
             zeroTexto();
             canvasMobileControls.SetActive(true);
+            playAnim = true;
+            btnDialogueAnim.SetBool("PlayAnim", playAnim);
         }
     }
 }

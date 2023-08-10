@@ -10,7 +10,7 @@ public class LastMission_Dialogue : MonoBehaviour
     public GameObject btnDialogue;
     public GameObject btnContinue;
     public GameObject dialoguePanel;
-    public GameObject canvasMobileControls;
+    public GameObject canvasMobileControls, panelControles_1, panelControles_2;
     public TMP_Text dialogueText;
     public GameObject auraEstadoMec;
     public GameObject colliderEstadoMec;
@@ -85,6 +85,8 @@ public class LastMission_Dialogue : MonoBehaviour
         {
             zeroTexto();
             canvasMobileControls.SetActive(true);
+            panelControles_1.SetActive(true);
+            panelControles_2.SetActive(true);
             btnDialogue.SetActive(false);
             auraEstadoMec.SetActive(true);
             colliderEstadoMec.SetActive(true);

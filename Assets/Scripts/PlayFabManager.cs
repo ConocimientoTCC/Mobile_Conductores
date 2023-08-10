@@ -9,6 +9,7 @@ using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
+    public Puntaje puntaje;
     public SoundManager soundManager;
     private static PlayFabManager instance;
     public Master_Start masterStart;
@@ -57,6 +58,33 @@ public class PlayFabManager : MonoBehaviour
         {
             FindObjectOfType<Master_Start>();
         }
+
+        if(puntaje == null)
+        {
+            FindObjectOfType<Puntaje>();
+        }
+    }
+
+    public void GetPlayerData()
+    {
+
+    }
+
+    public void SavePlayerData(string puntajeXD)
+    {
+        var request = new UpdateUserDataRequest {
+            Data = new Dictionary<string, string> {
+                {"Puntaje", puntajeXD},
+                {"Insignia_Preoperacional", "EN POSESIÓN" }
+            }
+            
+        };
+        PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
+    }
+
+    void OnDataSend(UpdateUserDataResult result)
+    {
+        Debug.Log("Enviado correctamente");
     }
 
     public void LoginButton()
@@ -92,6 +120,26 @@ public class PlayFabManager : MonoBehaviour
         PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
     }
 
+    public void ResetPasswordButton()
+    {
+        var request = new SendAccountRecoveryEmailRequest
+        {
+            Email = emailInputLogin.text,
+            TitleId = "44FC9"
+        };
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, OnPasswordReset, OnResetError);
+    }
+
+    void OnPasswordReset(SendAccountRecoveryEmailResult result)
+    {
+        alertPanel.SetActive(true);
+        alertTitleText.text = "¡Correo enviado!";
+        alertText.text = "El enlace de recuperación de tu contraseña se ha enviado exitosamanete a <b>" + emailInputLogin.text + "</b>.";
+        alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
+        soundManager.PlaySuccess1();
+    }
+
     void OnLoginSucess(LoginResult result)
     {
         loggedInPlayfabId = result.PlayFabId;
@@ -114,10 +162,6 @@ public class PlayFabManager : MonoBehaviour
 
     }
 
-    public void ResetPasswordButton()
-    {
-
-    }
 
     void OnSuccess(LoginResult result)
     {
@@ -135,12 +179,25 @@ public class PlayFabManager : MonoBehaviour
         else
         {
             alertTitleText.text = "Ups...";
-            alertText.text = "Asegúrate de haber llenado todos los campos correctamente.";
+            alertText.text = "Asegúrate de haber llenado todos los campos correctamente. Además revisa tu conexión a Internet.";
         }
         Debug.Log(error.ErrorMessage);
         Debug.Log(error.GenerateErrorReport());
         alertPanel.SetActive(true);
         
+        alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
+        alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
+        soundManager.PlayError1();
+    }
+
+    void OnResetError(PlayFabError error)
+    {
+        alertTitleText.text = "Ups...";
+        alertText.text = "Asegúrate de llenar correctamente el campo de Correo electrónico antes de presionar -¿Olvidaste tu contraseña-.";
+        Debug.Log(error.ErrorMessage);
+        Debug.Log(error.GenerateErrorReport());
+        alertPanel.SetActive(true);
+
         alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
         soundManager.PlayError1();
@@ -154,7 +211,7 @@ public class PlayFabManager : MonoBehaviour
             {
                 new StatisticUpdate
                 {
-                    StatisticName = "Test",
+                    StatisticName = "Puntaje Global",
                     Value = score
                 }
             }

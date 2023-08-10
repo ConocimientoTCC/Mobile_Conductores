@@ -10,57 +10,27 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 4543,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 5111,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 28188,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 29774,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.miui.home",
-            "processId": 3164,
-            "exited": false
-        },
-        {
-            "deviceId": "db2c47b4",
             "name": "com.android.settings",
             "processId": 2739,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 17806,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 9407,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 11335,
-            "exited": false
+            "exited": true
         }
     ],
     "m_Tags": {
