@@ -34,6 +34,16 @@ public class Puntaje : MonoBehaviour
         //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
     }
 
+    public void RestarPuntaje(int qtty)
+    {
+        // Incrementar el puntaje en 1
+        puntajeActual -= qtty;
+
+        // Actualizar la UI con el nuevo puntaje
+        ActualizarUI();
+        //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
+    }
+
     private void ActualizarUI()
     {
         // Actualizar el texto en la UI con el puntaje actual

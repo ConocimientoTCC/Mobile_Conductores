@@ -22,16 +22,23 @@ public class BasicsManager : MonoBehaviour
     public GameObject panelIntroBotiquin;
     public GameObject panelOutroBotiquin;
 
+    public GameObject canvasMecanico;
+    public GameObject panelIntroMecanico;
+    public GameObject panelOutroMecanico;
+
     public GameObject PanelPause;
+    
 
     public void ChangeScene(int number)
     {
+        
         if(Time.timeScale == 0)
         {
             Time.timeScale = 1;
         }
         SceneManager.LoadScene(number);
     }
+
 
     public void SwitchClosePanel(GameObject panel)
     {
@@ -101,6 +108,13 @@ public class BasicsManager : MonoBehaviour
         panelOutroBotiquin.SetActive(false);
     }
 
+    public void OpenMecanicoCanvas()
+    {
+        canvasMecanico.SetActive(true);
+        panelIntroMecanico.SetActive(true);
+        panelOutroMecanico.SetActive(false);
+    }
+
     public void CloseKitCanvas()
     {
         canvasKit.SetActive(false);
@@ -114,6 +128,11 @@ public class BasicsManager : MonoBehaviour
     public void CloseBotiquinCanvas()
     {
         canvasBotiquin.SetActive(false);
+    }
+
+    public void CloseMecanicoCanvas()
+    {
+        canvasMecanico.SetActive(false);
     }
 
     public void ExitApp()

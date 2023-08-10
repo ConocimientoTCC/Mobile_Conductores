@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EstadoMec_Collider : MonoBehaviour
 {
+    public BasicsManager basicsManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class EstadoMec_Collider : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            print("holi");
+            basicsManager.OpenMecanicoCanvas();
         }
     }
 }

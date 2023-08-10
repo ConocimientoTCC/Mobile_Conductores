@@ -9,6 +9,7 @@ using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
+    public SoundManager soundManager;
     private static PlayFabManager instance;
     public Master_Start masterStart;
     [Header("UI Register")]
@@ -16,6 +17,7 @@ public class PlayFabManager : MonoBehaviour
     public TMP_InputField userNameInput;
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
+    
 
     [Header("UI Login")]
     public TMP_InputField emailInputLogin;
@@ -98,6 +100,7 @@ public class PlayFabManager : MonoBehaviour
         alertText.text = "Bienvenido de vuelta <b>" + result.InfoResultPayload.PlayerProfile.DisplayName + "</b>, nos alegra verte.";
         alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseAlertPanel(); });
+        soundManager.PlaySuccess1();
     }
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
@@ -107,7 +110,8 @@ public class PlayFabManager : MonoBehaviour
         alertText.text = "¡Perfecto! Has creado tu cuenta, recuerda que desde el panel de ingreso puedes recuperar tu contraseña en caso de que lo necesites.";
         alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseAlertPanel(); });
-        
+        soundManager.PlaySuccess1();
+
     }
 
     public void ResetPasswordButton()
@@ -139,6 +143,7 @@ public class PlayFabManager : MonoBehaviour
         
         alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
+        soundManager.PlayError1();
     }
 
     public void SendLeaderboard(int score)
@@ -162,8 +167,9 @@ public class PlayFabManager : MonoBehaviour
         alertPanel.SetActive(true);
         alertTitleText.text = "Contraseña muy corta";
         alertText.text = "Tu contraseña debe contener mínimo 6 caracteres.";
-        alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseOnlyAlert(); });
+        soundManager.PlayError1();
     }
 
     void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)

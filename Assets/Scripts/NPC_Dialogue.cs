@@ -20,6 +20,8 @@ public class NPC_Dialogue : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     public float minDist = 4f;
+
+    public AudioSource dialogueSound;
     
     // Update is called once per frame
     void Update()
@@ -91,6 +93,7 @@ public class NPC_Dialogue : MonoBehaviour
     {
         foreach (char letter in dialogue[index].ToCharArray()) 
         {
+            dialogueSound.Play();
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }

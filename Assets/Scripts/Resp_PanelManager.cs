@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Resp_PanelManager : MonoBehaviour
 {
-    private int currentPanelIndex = 0;
+    public int currentPanelIndex = 0;
     private GameObject[] panels;
 
     private void Start()

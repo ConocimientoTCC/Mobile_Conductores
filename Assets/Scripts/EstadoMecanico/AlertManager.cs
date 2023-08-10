@@ -9,12 +9,14 @@ public class AlertManager : MonoBehaviour
     public GameObject alertPanel;
     public TMP_Text alertText, alertTitleText;
     public Image alertImage;
+    public AudioSource correctSound, wrongSound;
     public void CorrectAlert()
     {
         alertPanel.SetActive(true);
         alertTitleText.text = "¡Bien hecho!";
         alertText.text = "Has elegido la respuesta CORRECTA :D. Sigue así...";
         alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
+        correctSound.Play();
     }
 
     public void WrongAlert()
@@ -23,6 +25,7 @@ public class AlertManager : MonoBehaviour
         alertTitleText.text = "¡Ups...!";
         alertText.text = "Has elegido la respuesta INCORRECTA. Asegúrate de analizar bien la imagen.";
         alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
+        wrongSound.Play();
     }
 
     public void CloseAlert()

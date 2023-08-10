@@ -19,10 +19,16 @@ public class Interactable_Object : MonoBehaviour
     public Transform target;
     public float minDist = 6f;
 
+    public SoundManagerPreop soundManagerPreop;
+
     //int interactiveLayerMask;
 
     private void Start()
     {
+        if (soundManagerPreop == null)
+        {
+            soundManagerPreop = GameObject.Find("SoundManager_Preop").GetComponent<SoundManagerPreop>();
+        }
 
         //
         // Habilitar la interacción táctil en dispositivos móviles
@@ -70,6 +76,7 @@ public class Interactable_Object : MonoBehaviour
                 {
                     //print("hello2");
                     // Ejecutar la función de interacción
+                    soundManagerPreop.PlayItemSound();
                     PerformInteraction();
                 }
             }

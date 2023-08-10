@@ -37,6 +37,7 @@ public class Question_Mec : MonoBehaviour
         else
         {
             Debug.Log("Incorrecto");
+            questsManager.puntaje.RestarPuntaje(2);
             alertManager.WrongAlert();
         }
     }

@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "db2c47b4",
     "m_SelectedPackage": {
-        "deviceId": "db2c47b4",
-        "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-        "processId": 9407,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 9407,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 11335,
             "exited": false
         }
     ],
