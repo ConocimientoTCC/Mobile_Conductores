@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 public class BasicsManager : MonoBehaviour
 {
+    public static BasicsManager instance;
     public GameObject panelToKeepActive;
     public GameObject PanelManager;
     public GameObject canvasManual;
@@ -28,9 +31,20 @@ public class BasicsManager : MonoBehaviour
 
     public GameObject PanelPause;
 
-    public Animator questsBtnAnim;
-    
+    public GameObject panelAlertGlobal;
+    public TMP_Text alertGlobalTitle, alertGlobalText;
+    public Image alertGlobalSprite;
+    public Button alertGlobalBtn;
 
+    public GameObject panelNotification;
+    public TMP_Text notificationTitle;
+
+    public Animator questsBtnAnim;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     public void ChangeScene(int number)
     {
         
@@ -157,6 +171,17 @@ public class BasicsManager : MonoBehaviour
             Time.timeScale = 0;
         }
         
+    }
+
+    public void CloseOnlyAlertGlobal()
+    {
+        panelAlertGlobal.SetActive(false);
+    }
+
+
+    public void CloseOnlyNotification()
+    {
+        panelNotification.SetActive(false);
     }
 
     public void CancelAnim()

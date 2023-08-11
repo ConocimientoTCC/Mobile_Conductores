@@ -6,6 +6,7 @@ using TMPro;
 
 public class Puntaje : MonoBehaviour
 {
+    public BasicsManager basicsManager;
     public PlayFabManager playfabManager;
     public int puntajeInicial = 0; // Puntaje inicial
     public int puntajeActual; // Puntaje actual
@@ -21,7 +22,7 @@ public class Puntaje : MonoBehaviour
 
         // Establecer el puntaje inicial
         puntajeActual = puntajeInicial;
-        playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
+        //playfabManager.SendLeaderboard(puntajeActual); //--------- Enviar información a la DB de PlayFab
 
         // Actualizar la UI con el puntaje inicial
         ActualizarUI();
