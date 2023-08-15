@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0199c11aa6f514784c5c69cd8378d8, type: 3}
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
-  DevAccountEmail: conocimietnoyaprendizajetcc@gmail.com
-  DevAccountToken: rymsp1nzkyg9sw77py9tc9y95cjowcrmsmxqj1d7b1apahapptgnc43apoigkpwg5amiaj4t7z14yuz8cpuwm6xt8sxfqjypdx757phasxx58q37sb1m9b7zn6jjnsxj6dpi7a47wcoayfucy414su9aqgjmtmryicxjb6dw84buwuxrqq75ckf7pfg4sgh87oq7cpx9
+  DevAccountEmail: 
+  DevAccountToken: 
   AadAuthorization: 
-  SelectedStudio: Aprendizaje y Cultura
-  SdkPath: Assets/PlayFabSDK
+  SelectedStudio: 
+  SdkPath: 
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 1
-  curSubMenuIdx: 2
+  curMainMenuIdx: 0
+  curSubMenuIdx: 0

@@ -76,7 +76,11 @@ public class Interactable_Object : MonoBehaviour
                 {
                     //print("hello2");
                     // Ejecutar la función de interacción
-                    soundManagerPreop.PlayItemSound();
+                    if(this.gameObject.name != "Bobby")
+                    {
+                        soundManagerPreop.PlayItemSound();
+                    }
+                    
                     PerformInteraction();
                 }
             }

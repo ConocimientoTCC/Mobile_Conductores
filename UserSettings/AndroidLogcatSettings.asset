@@ -1,37 +1,13 @@
 {
     "m_SelectedDeviceId": "db2c47b4",
     "m_SelectedPackage": {
-        "deviceId": "db2c47b4",
-        "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-        "processId": 29984,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.android.settings",
-            "processId": 2739,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 17806,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 9407,
-            "exited": true
-        },
-        {
-            "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 11335,
-            "exited": true
-        },
         {
             "deviceId": "db2c47b4",
             "name": "com.miui.home",
@@ -40,15 +16,27 @@
         },
         {
             "deviceId": "db2c47b4",
-            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 17944,
-            "exited": false
+            "name": "com.android.chrome",
+            "processId": 28757,
+            "exited": true
         },
         {
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-            "processId": 29984,
-            "exited": false
+            "processId": 31526,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 5663,
+            "exited": true
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 14133,
+            "exited": true
         }
     ],
     "m_Tags": {

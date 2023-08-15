@@ -52,12 +52,17 @@ public class QuestsManager : MonoBehaviour
     public GameObject panelEstadoMecIntro;
     public GameObject panelEstadoMecOutro;
     public GameObject lastPanelMec;
+    public GameObject panelBGEstadoMec;
     public TMP_Text questTextEstadoMec;
     public Toggle toggleEstadoMec;
     public bool showBtn = true;
+    [Header("-- BADGES --")]
+    public GameObject canvasBadges;
+    public AudioSource soundBadges;
     // Start is called before the first frame update
     void Start()
     {
+        panelBGEstadoMec.SetActive(false);
         questTextEstadoMec.gameObject.SetActive(false);
         toggleEstadoMec.gameObject.SetActive(false);
 
@@ -76,6 +81,7 @@ public class QuestsManager : MonoBehaviour
             panelControles_2.SetActive(false);
             lastMissionDialogueBtn.SetActive(true);
             lastMissionDialogueBtn.GetComponent<Animator>().SetBool("PlayAnim", true);
+            panelBGEstadoMec.SetActive(true);
             questTextEstadoMec.gameObject.SetActive(true);
             toggleEstadoMec.gameObject.SetActive(true);
             numberQuests.text = 1.ToString();
@@ -178,7 +184,7 @@ public class QuestsManager : MonoBehaviour
         if (toggleEstadoMec.isOn == false)
         {
             achievementSound.Play();
-            puntaje.AumentarPuntaje(10);
+            puntaje.AumentarPuntaje(100);
             scoreSound.PlayDelayed(1.5f);
             puntaje.playfabManager.SavePlayerData(puntaje.puntajeActual.ToString());
         }
@@ -189,6 +195,17 @@ public class QuestsManager : MonoBehaviour
         panelEstadoMecOutro.SetActive(true);
         numberQuests.text = 0.ToString();
 
+    }
+
+    public void GiveBadge()
+    {
+        canvasBadges.SetActive(true);
+        soundBadges.Play();
+    }
+
+    public void OpenBadgeCanvas()
+    {
+        Invoke("GiveBadge", 2f);
     }
 
     public void UpdateQuestions()

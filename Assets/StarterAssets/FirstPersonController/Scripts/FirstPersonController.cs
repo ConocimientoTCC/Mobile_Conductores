@@ -18,7 +18,7 @@ namespace StarterAssets
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
-		public float RotationSpeed = 1.0f;
+		public float RotationSpeed = 0.5f;
 		public Slider mySlider;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
@@ -111,9 +111,9 @@ namespace StarterAssets
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
 
-#if UNITY_STANDALONE || UNITY_EDITOR
-			RotationSpeed = 0.01f;
-#endif
+//#if UNITY_STANDALONE || UNITY_EDITOR
+//			RotationSpeed = 0.01f;
+//#endif
         }
 
         private void Update()

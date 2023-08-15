@@ -6,6 +6,11 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class BasicsManager : MonoBehaviour
 {
+    [Header("Loading Screen")]
+    public GameObject loadingScreen;
+    public GameObject mainScreen;
+    public Slider loadingSlider;
+
     public static BasicsManager instance;
     public GameObject panelToKeepActive;
     public GameObject PanelManager;
@@ -191,4 +196,30 @@ public class BasicsManager : MonoBehaviour
             questsBtnAnim.SetBool("PlayAnim", false);
         }
     }
+
+    public void OpenUrlFix(string URL)
+    {
+        Application.OpenURL(URL);
+    }
+
+    public void LoadLevelBtn(int levelToLoad)
+    {
+        mainScreen.SetActive(false);
+        loadingScreen.SetActive(true);
+
+        StartCoroutine(LoadLevelAsync(levelToLoad));
+    }
+
+    IEnumerator LoadLevelAsync(int levelToLoad)
+    {
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
+
+        while (!loadOperation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
+            loadingSlider.value = progressValue;
+            yield return null;
+        }
+    }
+
 }
