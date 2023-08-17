@@ -24,6 +24,8 @@ public class PlayFabManager : MonoBehaviour
     public Master_Start masterStart;
     public LogoutMenuManager logoutMenuManager;
 
+    public TMP_Text bobbyText;
+
     private static PlayFabManager instance;
     
     [Header("UI Register")]
@@ -175,6 +177,7 @@ public class PlayFabManager : MonoBehaviour
         alertImage.sprite = Resources.Load<Sprite>("images/alertsCheck");
         alertBtn.onClick.AddListener(delegate { masterStart.CloseAlertPanel(); });
         soundManager.PlaySuccess1();
+        bobbyText.text = "¡Bienvenido! " + result.InfoResultPayload.PlayerProfile.DisplayName;
     }
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
@@ -200,8 +203,8 @@ public class PlayFabManager : MonoBehaviour
             alertTitleText.text = "Ups...";
             alertText.text = "Asegúrate de haber llenado todos los campos correctamente. Además revisa tu conexión a Internet.";
         }
-        Debug.Log(error.ErrorMessage);
-        Debug.Log(error.GenerateErrorReport());
+        //Debug.Log(error.ErrorMessage);
+        //Debug.Log(error.GenerateErrorReport());
         alertPanel.SetActive(true);
         
         alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
@@ -223,8 +226,8 @@ public class PlayFabManager : MonoBehaviour
     {
         alertTitleText.text = "Ups...";
         alertText.text = "Asegúrate de llenar correctamente el campo de Correo electrónico antes de presionar -¿Olvidaste tu contraseña-.";
-        Debug.Log(error.ErrorMessage);
-        Debug.Log(error.GenerateErrorReport());
+        //Debug.Log(error.ErrorMessage);
+        //Debug.Log(error.GenerateErrorReport());
         alertPanel.SetActive(true);
 
         alertImage.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
@@ -254,8 +257,8 @@ public class PlayFabManager : MonoBehaviour
 
         basicsManager.alertGlobalTitle.text = "Fallo en envío de datos";
         basicsManager.alertGlobalText.text = "Por favor verifica que tengas conexión a internet";
-        Debug.Log(error.ErrorMessage);
-        Debug.Log(error.GenerateErrorReport());
+        //Debug.Log(error.ErrorMessage);
+        //Debug.Log(error.GenerateErrorReport());
         basicsManager.panelAlertGlobal.SetActive(true);
 
         basicsManager.alertGlobalSprite.sprite = Resources.Load<Sprite>("images/alerts_Wrong");
@@ -264,7 +267,7 @@ public class PlayFabManager : MonoBehaviour
 
     void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
     {
-        Debug.Log("melo");
+        //Debug.Log("melo");
         basicsManager = GameObject.FindWithTag("MainBasicsManager").GetComponent<BasicsManager>();
         basicsManager.panelNotification.SetActive(true);
         basicsManager.notificationTitle.text = "Puntaje cargado con éxito en la nube.";
@@ -311,7 +314,7 @@ public class PlayFabManager : MonoBehaviour
             texts[1].text = item.DisplayName.ToString();
             texts[2].text = item.StatValue.ToString();
 
-            Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+            //Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
         }
     }
 
@@ -346,7 +349,7 @@ public class PlayFabManager : MonoBehaviour
                 texts[1].text = item.DisplayName.ToString();
                 texts[2].text = item.StatValue.ToString();
 
-                Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+                //Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
             }
         
     }

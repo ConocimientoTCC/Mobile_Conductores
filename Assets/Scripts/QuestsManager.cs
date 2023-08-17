@@ -75,7 +75,7 @@ public class QuestsManager : MonoBehaviour
         //subtractQuests = int.Parse(numberQuests.text);
         if(toggleLimpieza.isOn == true && toggleKit.isOn == true && toggleExtintor.isOn == true && toggleBotiquin.isOn == true && showBtn == true)
         {
-            print("puutamadre");
+            //print("it works.");
             showBtn = false;
             panelControles_1.SetActive(false);
             panelControles_2.SetActive(false);
@@ -103,7 +103,7 @@ public class QuestsManager : MonoBehaviour
             if (togglesQuests[i].isOn)
             {
                 subtractQuests -= 1;
-                print(subtractQuests.ToString());
+                //print(subtractQuests.ToString());
                 numberQuests.text = subtractQuests.ToString();
                 
             }

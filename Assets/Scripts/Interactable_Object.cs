@@ -44,7 +44,7 @@ public class Interactable_Object : MonoBehaviour
 
     private void Update()
     {
-        print("touchingui="+isTouchingUI);
+        //print("touchingui="+isTouchingUI);
         // Verificar si se ha tocado el objeto en dispositivos móviles
         if (isInteractable && Input.touchCount > 0 && isTouchingUI != true)
         {

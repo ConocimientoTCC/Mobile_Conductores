@@ -28,7 +28,7 @@ public class Question_Mec : MonoBehaviour
     {
         if (answerIndex == correctAnswerIndex)
         {
-            Debug.Log("Correcto");
+            //Debug.Log("Correcto");
             this.gameObject.GetComponent<Button>().interactable = false;
             otherButton.interactable = false;
             alertManager.CorrectAlert();
@@ -36,7 +36,7 @@ public class Question_Mec : MonoBehaviour
         }
         else
         {
-            Debug.Log("Incorrecto");
+            //Debug.Log("Incorrecto");
             questsManager.puntaje.RestarPuntaje(2);
             alertManager.WrongAlert();
         }

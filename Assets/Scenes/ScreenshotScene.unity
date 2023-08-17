@@ -23936,13 +23936,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a238811df17d3e4a9d880581b3aa471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  mainScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
   panelToKeepActive: {fileID: 1679376361}
   PanelManager: {fileID: 1622384105}
   canvasManual: {fileID: 1977237206}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 6751388635511190959}
   canvasKit: {fileID: 0}
+  panelIntroKit: {fileID: 0}
+  panelOutroKit: {fileID: 0}
+  canvasExtintor: {fileID: 0}
+  panelIntroExtintor: {fileID: 0}
+  panelOutroExtintor: {fileID: 0}
+  canvasBotiquin: {fileID: 0}
+  panelIntroBotiquin: {fileID: 0}
+  panelOutroBotiquin: {fileID: 0}
+  canvasMecanico: {fileID: 0}
+  panelIntroMecanico: {fileID: 0}
+  panelOutroMecanico: {fileID: 0}
   PanelPause: {fileID: 0}
+  panelAlertGlobal: {fileID: 0}
+  alertGlobalTitle: {fileID: 0}
+  alertGlobalText: {fileID: 0}
+  alertGlobalSprite: {fileID: 0}
+  alertGlobalBtn: {fileID: 0}
+  panelNotification: {fileID: 0}
+  notificationTitle: {fileID: 0}
+  questsBtnAnim: {fileID: 0}
 --- !u!1 &1128565252
 GameObject:
   m_ObjectHideFlags: 0
@@ -29782,7 +29804,7 @@ PrefabInstance:
     - target: {fileID: 7355713013926475229, guid: 82a76256a42024049964a0c8b9bb380f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a76256a42024049964a0c8b9bb380f, type: 3}
@@ -33678,6 +33700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71cd3bdec68304e8f60ea0f10228fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPanelIndex: 0
 --- !u!1001 &1623618849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37696,13 +37719,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a238811df17d3e4a9d880581b3aa471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  mainScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
   panelToKeepActive: {fileID: 0}
   PanelManager: {fileID: 0}
   canvasManual: {fileID: 0}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 0}
   canvasKit: {fileID: 0}
+  panelIntroKit: {fileID: 0}
+  panelOutroKit: {fileID: 0}
+  canvasExtintor: {fileID: 0}
+  panelIntroExtintor: {fileID: 0}
+  panelOutroExtintor: {fileID: 0}
+  canvasBotiquin: {fileID: 0}
+  panelIntroBotiquin: {fileID: 0}
+  panelOutroBotiquin: {fileID: 0}
+  canvasMecanico: {fileID: 0}
+  panelIntroMecanico: {fileID: 0}
+  panelOutroMecanico: {fileID: 0}
   PanelPause: {fileID: 0}
+  panelAlertGlobal: {fileID: 0}
+  alertGlobalTitle: {fileID: 0}
+  alertGlobalText: {fileID: 0}
+  alertGlobalSprite: {fileID: 0}
+  alertGlobalBtn: {fileID: 0}
+  panelNotification: {fileID: 0}
+  notificationTitle: {fileID: 0}
+  questsBtnAnim: {fileID: 0}
 --- !u!4 &1789094182
 Transform:
   m_ObjectHideFlags: 0
@@ -47393,8 +47438,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149219952613}
   m_LocalRotation: {x: -0, y: 0.70340186, z: -0, w: 0.7107925}
-  m_LocalPosition: {x: -88.16, y: 2.18, z: 10.200001}
-  m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.2121}
+  m_LocalPosition: {x: -88.16, y: 2.07, z: 10.200001}
+  m_LocalScale: {x: 1.6406987, y: 1.6406987, z: 1.6406987}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5465940246541352395}
@@ -47807,7 +47852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &919132149219952614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53455,9 +53500,12 @@ MonoBehaviour:
   imageTouchManual: {fileID: 0}
   imageTouchCarpeta: {fileID: 0}
   imageTouchKit: {fileID: 0}
+  imageTouchExtintor: {fileID: 0}
+  imageTouchBotiquin: {fileID: 0}
   defaultTarget: {fileID: 0}
   target: {fileID: 0}
   minDist: 6
+  soundManagerPreop: {fileID: 0}
 --- !u!23 &7107113938307949029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55127,13 +55175,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a238811df17d3e4a9d880581b3aa471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  mainScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
   panelToKeepActive: {fileID: 0}
   PanelManager: {fileID: 0}
   canvasManual: {fileID: 0}
   canvasDocuments: {fileID: 0}
   canvasMobileControls: {fileID: 0}
   canvasKit: {fileID: 0}
+  panelIntroKit: {fileID: 0}
+  panelOutroKit: {fileID: 0}
+  canvasExtintor: {fileID: 0}
+  panelIntroExtintor: {fileID: 0}
+  panelOutroExtintor: {fileID: 0}
+  canvasBotiquin: {fileID: 0}
+  panelIntroBotiquin: {fileID: 0}
+  panelOutroBotiquin: {fileID: 0}
+  canvasMecanico: {fileID: 0}
+  panelIntroMecanico: {fileID: 0}
+  panelOutroMecanico: {fileID: 0}
   PanelPause: {fileID: 0}
+  panelAlertGlobal: {fileID: 0}
+  alertGlobalTitle: {fileID: 0}
+  alertGlobalText: {fileID: 0}
+  alertGlobalSprite: {fileID: 0}
+  alertGlobalBtn: {fileID: 0}
+  panelNotification: {fileID: 0}
+  notificationTitle: {fileID: 0}
+  questsBtnAnim: {fileID: 0}
 --- !u!4 &7963990339785480315
 Transform:
   m_ObjectHideFlags: 0

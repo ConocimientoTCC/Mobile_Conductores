@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "db2c47b4",
         "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
-        "processId": 7664,
+        "processId": 3794,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "db2c47b4",
             "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
             "processId": 7664,
+            "exited": false
+        },
+        {
+            "deviceId": "db2c47b4",
+            "name": "com.GrupoLogisticoTCC.EntrenamientoConductores",
+            "processId": 3794,
             "exited": false
         }
     ],
